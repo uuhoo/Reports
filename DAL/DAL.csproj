@@ -47,9 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CenterDAL.cs" />
     <Compile Include="DapperHelper.cs" />
     <Compile Include="LoginDAL.cs" />
+    <Compile Include="OrganizationDAL.cs" />
+    <Compile Include="PermissionDAL.cs" />
+    <Compile Include="PromotionOrganizationDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerOrganizationDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj">

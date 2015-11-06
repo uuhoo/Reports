@@ -15,7 +15,9 @@ namespace LJ.Reports.Entity
         public int parent_code { get; set; }
         public string name { get; set; }
         public string login_name { get; set; }
-        public string password { get; set; }
+        public string pwd { get; set; }
+        public string org_id { get; set; }
+        public int org_sign { get; set; }
         public string remark { get; set; }
     }
 }

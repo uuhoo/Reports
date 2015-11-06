@@ -21,6 +21,7 @@ namespace LJ.Reports.Web
                  "~/Content/EasyUI/jquery.js",
                  "~/Content/EasyUI/jquery.easyui.js",
                  "~/Scripts/datagrid-detailview.js",
+                 "~/Scripts/jquery.Extend.js",
                  "~/Content/EasyUI/locale/easyui-lang-zh_CN.js"));
 
             bundles.Add(new StyleBundle("~/EasyUICSS").Include(

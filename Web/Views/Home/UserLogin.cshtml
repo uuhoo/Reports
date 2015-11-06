@@ -1,32 +1,32 @@
 ﻿@{
     ViewBag.Title = "Index";
-    Layout =null;
+    Layout = null;
 }
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>优护送统计登录</title>
-    <link href="Content/login.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/login.css" rel="stylesheet" type="text/css" />
     @Scripts.Render("~/JqueryJS")
 
 
     <script type="text/javascript">
-        $(function(){
-            $("#btnLogin").click(function(){
+        $(function () {
+            $("#btnLogin").click(function () {
                 $.ajax({
-                    type: 'get',
+                    type: 'Post',
                     async: false, //设置同步方式
                     //cache: false,//缓存
-                    url: '@Url.Content("~/Home/ValidateUser/")',
+                    url: '@Url.Content("~/Home/ValidateUser")',
                     data:
                {
                    loginName: $("#username").val(),
-                   pwd: $("#password").val()
+                   pwd: $("#userpwd").val()
                },
                     success: function (jsonObj) {
                         $.handleJsonResult(jsonObj, function () {
-                            window.location = data.RedirectURL;
+                            window.location = jsonObj.RedirectURL;
                         });
                     },
                     error: function (data) {
@@ -38,23 +38,23 @@
             })
 
         });
-       
+
     </script>
 </head>
 
 <body class="login">
 
     <div class="login_m">
-        <div class="login_logo"><img src="Images/logo.png" width="196" height="46" /></div>
+        <div class="login_logo"><img src="~/Images/logo.png" width="196" height="46" /></div>
         <div class="login_boder">
             <div class="login_padding">
                 <h2>用户名</h2>
                 <label>
-                    <input type="text" id="username" class="txt_input txt_input2" onfocus="if (value ==&#39;Your name&#39;){value =&#39;&#39;}" onblur="    if (value ==&#39;&#39;){value=&#39;Your name&#39;}" value="Your name" />
+                    <input type="text" id="username" class="txt_input txt_input2" value="" />
                 </label>
                 <h2>密码</h2>
                 <label>
-                    <input type="password" name="textfield2" id="userpwd" class="txt_input" onfocus="if (value ==&#39;******&#39;){value =&#39;&#39;}" onblur="if (value ==&#39;&#39;){value=&#39;******&#39;}" value="******" />
+                    <input type="password" name="userpwd" id="userpwd" class="txt_input" value="" />
                 </label>
                 <p class="forgot"></p>
                 <div class="rem_sub">

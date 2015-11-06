@@ -21,6 +21,7 @@ namespace LJ.Reports.Web
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleTable.EnableOptimizations = false;//是否开启合并
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }

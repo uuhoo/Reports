@@ -1,46 +1,97 @@
-﻿@model IEnumerable<LJ.Reports.Entity.IncomeTemplateItem>
-
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "统计列表";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section scripts{
+    <script type="text/javascript">
 
-<h2>Index</h2>
+        //页面初始化
+        $(document).ready(function () {
+            bindGrid();
+        });
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.item_id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.item_name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.value)
-        </th>
-        <th></th>
-    </tr>
+        $(window).resize(function () {
+            setGridListSize("#main_layout", "#gridLinkURLList");
+        });
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.item_id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.item_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.value)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
+        //初始化加载数据
+        function bindGrid() {
+            $('#gridLinkURLList').datagrid({
+                width: 'auto',
+                height: 'auto',
+                async: false, //设置同步方式
+                fitColumns: false,
+                singleSelect: true,
+                loadMsg: '数据加载中请稍后……',
+                url: '@Url.Content("~/Reports/ReportsList")',
+                striped: true,
+                fit: false,// datagrid自适应宽高
+                pagination: true,//启用分页，默认每页10行
+                rownumbers: true,//显示页码，默认 提供 10 - 50 的页容量选择下拉框
+                pageSize: 15,//设置 页容量5为
+                pageList: [15, 20, 30],//设置 页容量下拉框
+                frozenColumns: [[
+                   { field: "id", title: "id", width: '5%', align: "center", hidden: true },
+                   { field: "parent_code", title: "parent_code", width: '5%', align: "center", hidden: true },
+                   { field: "name", title: "报表名称", width: '75%', align: "center" },
+                   {
+                       field: 'opt', title: '查看', width: '25%', align: 'center', frozen: 'true',
+                       formatter: function (value, row, index) {
+                           return '<a class="linkURLcls")">查看</a>';
+                       }
+                   },
+                   { field: "url", title: "url", hidden: true },
+                ]],
+
+                onLoadSuccess: function (data) {
+                    $('.linkURLcls').linkbutton({
+                        text: '查看',
+                        plain: true,
+                        iconCls: 'icon-search',
+                    });
+                },
+
+                onClickRow: function (rowIndex, rowData) {
+                    var rowURL = rowData.url;
+                    window.open('@Url.Content("~/")' + rowURL);
+                }
+            });
+
+            setGridListSize("#main_layout", "#gridLinkURLList");
+        }
+
+        function setGridListSize(tid, cid) {
+            var height = $(window).height() - 20;
+            $(tid).layout({
+                width: '100%',
+                height: height
+            });
+            $(cid).datagrid('resize', {
+                width: '100%',
+                height: '100%'
+            });
+        }
+
+    </script>
 }
 
-</table>
+<div style="margin-top:5px;margin-left:5px;margin-right:5px;margin-bottom:5px;">
+    <div id="main_layout" class="easyui-layout">
+        <div data-options="region:'north'" style="height: 60px;background-color:#95B8E7;">
+            <span style="margin-left:0.5%;">
+                <font size="3" style="line-height: 2.0em;" color="white">
+                    <b>优护送统计</b>
+                </font>
+            </span>
+
+            <span style="float:right;margin-top:10px;margin-right:20px;">
+                <font size="3" color="white">欢迎 :Admin</font>
+            </span>
+        </div>
+
+        <div data-options="region:'center' ">
+            <table id="gridLinkURLList"></table>
+        </div>
+
+    </div>
+</div>

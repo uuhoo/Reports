@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryui")
+    <link id="easyuiTheme" type="text/css" href="~/Content/EasyUI/themes/default/easyui.css" rel="stylesheet" />
+    <link href="~/Content/EasyUI/themes/icon.css" rel="stylesheet" />
+    @Scripts.Render("~/EasyUIJS")
 </head>
-<body>
+<body style="text-align: center;">
     @RenderBody()
     @RenderSection("Scripts", required: false)
 </body>

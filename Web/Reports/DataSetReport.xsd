@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetReport" targetNamespace="http://tempuri.org/DataSetReport.xsd" xmlns:mstns="http://tempuri.org/DataSetReport.xsd" xmlns="http://tempuri.org/DataSetReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReport" msprop:Generator_UserDSName="DataSetReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableServiceOrganization" msprop:Generator_TableClassName="DataTableServiceOrganizationDataTable" msprop:Generator_TableVarName="tableDataTableServiceOrganization" msprop:Generator_TablePropName="DataTableServiceOrganization" msprop:Generator_RowDeletingName="DataTableServiceOrganizationRowDeleting" msprop:Generator_RowChangingName="DataTableServiceOrganizationRowChanging" msprop:Generator_RowEvHandlerName="DataTableServiceOrganizationRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableServiceOrganizationRowDeleted" msprop:Generator_UserTableName="DataTableServiceOrganization" msprop:Generator_RowChangedName="DataTableServiceOrganizationRowChanged" msprop:Generator_RowEvArgName="DataTableServiceOrganizationRowChangeEvent" msprop:Generator_RowClassName="DataTableServiceOrganizationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="订单ID" msprop:Generator_ColumnVarNameInTable="column订单ID" msprop:Generator_ColumnPropNameInRow="订单ID" msprop:Generator_ColumnPropNameInTable="订单IDColumn" msprop:Generator_UserColumnName="订单ID" type="xs:string" minOccurs="0" />
+              <xs:element name="订单名称" msprop:Generator_ColumnVarNameInTable="column订单名称" msprop:Generator_ColumnPropNameInRow="订单名称" msprop:Generator_ColumnPropNameInTable="订单名称Column" msprop:Generator_UserColumnName="订单名称" type="xs:string" minOccurs="0" />
+              <xs:element name="预约时间" msprop:Generator_ColumnVarNameInTable="column预约时间" msprop:Generator_ColumnPropNameInRow="预约时间" msprop:Generator_ColumnPropNameInTable="预约时间Column" msprop:Generator_UserColumnName="预约时间" type="xs:string" minOccurs="0" />
+              <xs:element name="服务机构" msprop:Generator_ColumnVarNameInTable="column服务机构" msprop:Generator_ColumnPropNameInRow="服务机构" msprop:Generator_ColumnPropNameInTable="服务机构Column" msprop:Generator_UserColumnName="服务机构" type="xs:string" minOccurs="0" />
+              <xs:element name="订单总价" msprop:Generator_ColumnVarNameInTable="column订单总价" msprop:Generator_ColumnPropNameInRow="订单总价" msprop:Generator_ColumnPropNameInTable="订单总价Column" msprop:Generator_UserColumnName="订单总价" type="xs:string" minOccurs="0" />
+              <xs:element name="机构所得" msprop:Generator_ColumnVarNameInTable="column机构所得" msprop:Generator_ColumnPropNameInRow="机构所得" msprop:Generator_ColumnPropNameInTable="机构所得Column" msprop:Generator_UserColumnName="机构所得" type="xs:string" minOccurs="0" />
+              <xs:element name="司机" msprop:Generator_ColumnVarNameInTable="column司机" msprop:Generator_ColumnPropNameInRow="司机" msprop:Generator_ColumnPropNameInTable="司机Column" msprop:Generator_UserColumnName="司机" type="xs:string" minOccurs="0" />
+              <xs:element name="司机所得" msprop:Generator_ColumnVarNameInTable="column司机所得" msprop:Generator_ColumnPropNameInRow="司机所得" msprop:Generator_ColumnPropNameInTable="司机所得Column" msprop:Generator_UserColumnName="司机所得" type="xs:string" minOccurs="0" />
+              <xs:element name="医生" msprop:Generator_ColumnVarNameInTable="column医生" msprop:Generator_ColumnPropNameInRow="医生" msprop:Generator_ColumnPropNameInTable="医生Column" msprop:Generator_UserColumnName="医生" type="xs:string" minOccurs="0" />
+              <xs:element name="医生所得" msprop:Generator_ColumnVarNameInTable="column医生所得" msprop:Generator_ColumnPropNameInRow="医生所得" msprop:Generator_ColumnPropNameInTable="医生所得Column" msprop:Generator_UserColumnName="医生所得" type="xs:string" minOccurs="0" />
+              <xs:element name="护送员" msprop:Generator_ColumnVarNameInTable="column护送员" msprop:Generator_ColumnPropNameInRow="护送员" msprop:Generator_ColumnPropNameInTable="护送员Column" msprop:Generator_UserColumnName="护送员" type="xs:string" minOccurs="0" />
+              <xs:element name="护送员所得" msprop:Generator_ColumnVarNameInTable="column护送员所得" msprop:Generator_ColumnPropNameInRow="护送员所得" msprop:Generator_ColumnPropNameInTable="护送员所得Column" msprop:Generator_UserColumnName="护送员所得" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTablePromotionOrganization" msprop:Generator_TableClassName="DataTablePromotionOrganizationDataTable" msprop:Generator_TableVarName="tableDataTablePromotionOrganization" msprop:Generator_TablePropName="DataTablePromotionOrganization" msprop:Generator_RowDeletingName="DataTablePromotionOrganizationRowDeleting" msprop:Generator_RowChangingName="DataTablePromotionOrganizationRowChanging" msprop:Generator_RowEvHandlerName="DataTablePromotionOrganizationRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTablePromotionOrganizationRowDeleted" msprop:Generator_UserTableName="DataTablePromotionOrganization" msprop:Generator_RowChangedName="DataTablePromotionOrganizationRowChanged" msprop:Generator_RowEvArgName="DataTablePromotionOrganizationRowChangeEvent" msprop:Generator_RowClassName="DataTablePromotionOrganizationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="订单ID" msprop:Generator_ColumnVarNameInTable="column订单ID" msprop:Generator_ColumnPropNameInRow="订单ID" msprop:Generator_ColumnPropNameInTable="订单IDColumn" msprop:Generator_UserColumnName="订单ID" type="xs:string" minOccurs="0" />
+              <xs:element name="订单名称" msprop:Generator_ColumnVarNameInTable="column订单名称" msprop:Generator_ColumnPropNameInRow="订单名称" msprop:Generator_ColumnPropNameInTable="订单名称Column" msprop:Generator_UserColumnName="订单名称" type="xs:string" minOccurs="0" />
+              <xs:element name="预约时间" msprop:Generator_ColumnVarNameInTable="column预约时间" msprop:Generator_ColumnPropNameInRow="预约时间" msprop:Generator_ColumnPropNameInTable="预约时间Column" msprop:Generator_UserColumnName="预约时间" type="xs:string" minOccurs="0" />
+              <xs:element name="订单总价" msprop:Generator_ColumnVarNameInTable="column订单总价" msprop:Generator_ColumnPropNameInRow="订单总价" msprop:Generator_ColumnPropNameInTable="订单总价Column" msprop:Generator_UserColumnName="订单总价" type="xs:string" minOccurs="0" />
+              <xs:element name="推广机构" msprop:Generator_ColumnVarNameInTable="column推广机构" msprop:Generator_ColumnPropNameInRow="推广机构" msprop:Generator_ColumnPropNameInTable="推广机构Column" msprop:Generator_UserColumnName="推广机构" type="xs:string" minOccurs="0" />
+              <xs:element name="机构所得" msprop:Generator_ColumnVarNameInTable="column机构所得" msprop:Generator_ColumnPropNameInRow="机构所得" msprop:Generator_ColumnPropNameInTable="机构所得Column" msprop:Generator_UserColumnName="机构所得" type="xs:string" minOccurs="0" />
+              <xs:element name="推广人" msprop:Generator_ColumnVarNameInTable="column推广人" msprop:Generator_ColumnPropNameInRow="推广人" msprop:Generator_ColumnPropNameInTable="推广人Column" msprop:Generator_UserColumnName="推广人" type="xs:string" minOccurs="0" />
+              <xs:element name="推广人所得" msprop:Generator_ColumnVarNameInTable="column推广人所得" msprop:Generator_ColumnPropNameInRow="推广人所得" msprop:Generator_ColumnPropNameInTable="推广人所得Column" msprop:Generator_UserColumnName="推广人所得" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

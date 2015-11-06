@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RedirectToLogin</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            window.top.location.href = '@Url.Content("~/Home/UserLogin")';
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

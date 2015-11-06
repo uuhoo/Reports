@@ -14,7 +14,6 @@ namespace LJ.Reports.DAL
     /// </summary>
     public class LoginDAL
     {
-
         /// <summary>
         ///  用户登录
         /// </summary>
@@ -25,7 +24,7 @@ namespace LJ.Reports.DAL
         {
             using (IDbConnection conn = DapperHelper.getDBConnection())
             {
-                var sql = @"SELECT * FROM center WHERE login_name=@uname AND  pwd=@pwd ";
+                var sql = @"SELECT * FROM center WHERE login_name=@uname AND pwd=@pwd ";
                 return conn.Query<center>(sql, new { uname = username, pwd = password }).SingleOrDefault();
             }
         }

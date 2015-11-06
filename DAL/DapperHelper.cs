@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace LJ.Reports.DAL
 {
-
     /// <summary>
     /// DapperHelper 连接工厂类
     /// </summary>
@@ -17,7 +16,7 @@ namespace LJ.Reports.DAL
     {
 
         //获取字符串配置节点
-        private static readonly ConnectionStringSettings connSettings = ConfigurationManager.ConnectionStrings["DBContext"];
+        public static readonly ConnectionStringSettings connSettings = ConfigurationManager.ConnectionStrings["DBContext"];
         public static IDbConnection getDBConnection()
         {
             IDbConnection conn = DbProviderFactories.GetFactory(connSettings.ProviderName).CreateConnection();

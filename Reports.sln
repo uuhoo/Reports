@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Libs", "0.Libs", "{AAE250ED-ED67-4D40-9100-435C7749D2B9}"
 	ProjectSection(SolutionItems) = preProject
 		Libs\Dapper.dll = Libs\Dapper.dll
+		Libs\Microsoft.ReportViewer.WebForms.dll = Libs\Microsoft.ReportViewer.WebForms.dll
+		Libs\MySql.Data.dll = Libs\MySql.Data.dll
 		Libs\Newtonsoft.Json.dll = Libs\Newtonsoft.Json.dll
 	EndProjectSection
 EndProject
@@ -22,6 +24,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Entity", "3.Entity", "{B1FCAF70-C3C4-4533-99E9-C32711F38E84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{BB23557B-5916-4714-8C33-733850DF1083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{4549134F-CEE8-4DCA-BB57-B7B545732145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{BB23557B-5916-4714-8C33-733850DF1083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB23557B-5916-4714-8C33-733850DF1083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB23557B-5916-4714-8C33-733850DF1083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4549134F-CEE8-4DCA-BB57-B7B545732145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4549134F-CEE8-4DCA-BB57-B7B545732145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4549134F-CEE8-4DCA-BB57-B7B545732145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4549134F-CEE8-4DCA-BB57-B7B545732145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{85398376-1E2F-4399-9FA9-148A3F66D294} = {BE26B430-DA12-40EA-807F-E5D50539A314}
 		{34E20484-EEFE-41F1-A596-BA7275619501} = {187504A2-CD1C-421A-87E2-86B083D1A559}
 		{961BACF3-62F5-4888-818C-7D8D1521AFEC} = {187504A2-CD1C-421A-87E2-86B083D1A559}
+		{4549134F-CEE8-4DCA-BB57-B7B545732145} = {187504A2-CD1C-421A-87E2-86B083D1A559}
 		{BB23557B-5916-4714-8C33-733850DF1083} = {B1FCAF70-C3C4-4533-99E9-C32711F38E84}
 	EndGlobalSection
 EndGlobal

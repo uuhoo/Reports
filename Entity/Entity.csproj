@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="center.cs" />
+    <Compile Include="EasyUIModel\DataGridModel.cs" />
+    <Compile Include="organization.cs" />
+    <Compile Include="permission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseMsgInfo.cs" />
   </ItemGroup>
