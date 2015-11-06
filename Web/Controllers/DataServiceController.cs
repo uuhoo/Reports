@@ -28,9 +28,12 @@ namespace LJ.Reports.Web.Controllers
 
                 list.Add(new organization() { id = -1, name = "--全选--" });
                 if (orgSign.Equals(1))
-                    list.AddRange(new DataServiceBLL().GeOrganizationBy(string.Join(",", organizationList)));
+                {
+                    var templist = new DataServiceBLL().GeOrganizationBy(organizationList.ToArray());
+                    list.AddRange(templist);
+                }                    
                 else
-                    list.AddRange(new DataServiceBLL().GeStaffOrganizationBy(string.Join(",", organizationList)));
+                    list.AddRange(new DataServiceBLL().GeStaffOrganizationBy(organizationList.ToArray()));
 
                 return Json(list);
             }

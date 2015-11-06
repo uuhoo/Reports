@@ -19,7 +19,7 @@ namespace LJ.Reports.BLL
         /// </summary>
         /// <param name="orgIDs"></param>
         /// <returns></returns>
-        public List<organization> GeOrganizationBy(string orgIDs)
+        public List<organization> GeOrganizationBy(string[] orgIDs)
         {
             return new OrganizationDAL().GeOrganizationBy(orgIDs);
         }
@@ -29,7 +29,7 @@ namespace LJ.Reports.BLL
         /// </summary>
         /// <param name="orgIDs"></param>
         /// <returns></returns>
-        public List<organization> GeStaffOrganizationBy(string orgIDs)
+        public List<organization> GeStaffOrganizationBy(string[] orgIDs)
         {
             return new OrganizationDAL().GeStaffOrganizationBy(orgIDs);
         }

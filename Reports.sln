@@ -6,7 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Libs", "0.Libs", "{AAE250ED-ED67-4D40-9100-435C7749D2B9}"
 	ProjectSection(SolutionItems) = preProject
 		Libs\Dapper.dll = Libs\Dapper.dll
-		Libs\Microsoft.ReportViewer.WebForms.dll = Libs\Microsoft.ReportViewer.WebForms.dll
+		Libs\Microsoft.ReportViewer.Common.dll = Libs\Microsoft.ReportViewer.Common.dll
+		Libs\Microsoft.ReportViewer.DataVisualization.DLL = Libs\Microsoft.ReportViewer.DataVisualization.DLL
+		Libs\Microsoft.ReportViewer.ProcessingObjectModel.DLL = Libs\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+		Libs\Microsoft.SqlServer.Types.dll = Libs\Microsoft.SqlServer.Types.dll
 		Libs\MySql.Data.dll = Libs\MySql.Data.dll
 		Libs\Newtonsoft.Json.dll = Libs\Newtonsoft.Json.dll
 	EndProjectSection

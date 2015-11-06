@@ -19,12 +19,13 @@ namespace LJ.Reports.DAL
         /// </summary>
         /// <param name="orgList"></param>
         /// <returns></returns>
-        public List<organization> GeOrganizationBy(string orgIDs)
+        public List<organization> GeOrganizationBy(string[] orgIDs)
         {
             using (IDbConnection conn = DapperHelper.getDBConnection())
             {
-                var sql = @"SELECT id,name FROM organization where id IN(@ids)";
-                return conn.Query<organization>(sql, new { ids = orgIDs }).ToList();
+                var sql = @"SELECT id,name FROM organization where id IN @ids";
+                var sss = conn.Query<organization>(sql, new { ids = orgIDs }).ToList();
+                return sss;
             }
         }
 
@@ -33,11 +34,11 @@ namespace LJ.Reports.DAL
         /// </summary>
         /// <param name="orgList"></param>
         /// <returns></returns>
-        public List<organization> GeStaffOrganizationBy(string orgIDs)
+        public List<organization> GeStaffOrganizationBy(string[] orgIDs)
         {
             using (IDbConnection conn = DapperHelper.getDBConnection())
             {
-                var sql = @"SELECT id,name FROM staff_organization where id IN(@ids)";
+                var sql = @"SELECT id,name FROM staff_organization where id IN @ids ";
                 return conn.Query<organization>(sql, new { ids = orgIDs }).ToList();
             }
         }

@@ -316,7 +316,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>订单ID</rd:DefaultName>
@@ -345,7 +347,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>订单名称</rd:DefaultName>
@@ -374,7 +378,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>预约时间</rd:DefaultName>
@@ -403,7 +409,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>订单总价</rd:DefaultName>
@@ -432,7 +440,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>推广机构</rd:DefaultName>
@@ -461,7 +471,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>机构所得</rd:DefaultName>
@@ -490,7 +502,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>推广人</rd:DefaultName>
@@ -519,7 +533,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>推广人所得</rd:DefaultName>
@@ -573,17 +589,17 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.36702in</Height>
+    <Height>0.64827in</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
     </Style>
   </Body>
-  <Width>10.30807in</Width>
+  <Width>9.33932in</Width>
   <Page>
     <PageHeader>
-      <Height>3.67771cm</Height>
+      <Height>3.81882cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -608,8 +624,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>textbox1</rd:DefaultName>
-          <Top>1.99447cm</Top>
-          <Left>8.82146cm</Left>
+          <Top>1.4653cm</Top>
+          <Left>7.70875cm</Left>
           <Height>0.91429cm</Height>
           <Width>9cm</Width>
           <Style>
@@ -638,8 +654,8 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>3.04987cm</Top>
-          <Left>2.5cm</Left>
+          <Top>3.24826cm</Top>
+          <Left>0.43875cm</Left>
           <Height>0.5cm</Height>
           <Width>9cm</Width>
           <ZIndex>1</ZIndex>
@@ -669,7 +685,7 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>3.04987cm</Top>
+          <Top>3.24826cm</Top>
           <Left>17.55917cm</Left>
           <Height>0.5cm</Height>
           <Width>5.75cm</Width>
@@ -685,8 +701,8 @@
           <Source>Embedded</Source>
           <Value>联捷科技04</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>1.13326cm</Top>
-          <Left>2.76141cm</Left>
+          <Top>1.2611cm</Top>
+          <Left>0.43875cm</Left>
           <Height>1.88133cm</Height>
           <Width>3.46604cm</Width>
           <ZIndex>3</ZIndex>
@@ -726,9 +742,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
           <Top>0.30854cm</Top>
-          <Left>11.65459cm</Left>
+          <Left>0.43875cm</Left>
           <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Width>22.87042cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

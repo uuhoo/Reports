@@ -60,6 +60,11 @@ namespace LJ.Reports.Web.Reports
                     OrganizationList.Add(strOrgIDs);
                 }
             }
+            else
+            {    
+                var listCenter = SessionHelper.GetSession(SessionHelper.SubCenters) as List<center>;
+                OrganizationList = listCenter.Where(c => c.org_sign.Equals(org_sign)).Select(c => c.org_id).ToList(); 
+            }
 
             DateTime start = Convert.ToDateTime(this.StartDate.Text);
             DateTime end = Convert.ToDateTime(this.EndDate.Text);
