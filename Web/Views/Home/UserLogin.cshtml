@@ -10,34 +10,40 @@
     <link href="~/Content/login.css" rel="stylesheet" type="text/css" />
     @Scripts.Render("~/JqueryJS")
 
-
     <script type="text/javascript">
         $(function () {
+
             $("#btnLogin").click(function () {
-                $.ajax({
-                    type: 'Post',
-                    async: false, //设置同步方式
-                    //cache: false,//缓存
-                    url: '@Url.Content("~/Home/ValidateUser")',
-                    data:
-               {
-                   loginName: $("#username").val(),
-                   pwd: $("#userpwd").val()
-               },
-                    success: function (jsonObj) {
-                        $.handleJsonResult(jsonObj, function () {
-                            window.location = jsonObj.RedirectURL;
-                        });
-                    },
-                    error: function (data) {
-                        alert(data.statusText);
-                    }
-                });
+                submit();
+            });
 
-
-            })
-
+            $('#userpwd').keypress(function (event) {
+                if (event.keyCode == "13") {
+                    submit();
+                }
+            });
         });
+
+        function submit() {
+            $.ajax({
+                type: 'Post',
+                async: false, //设置同步方式
+                url: '@Url.Content("~/Home/ValidateUser")',
+                data:
+           {
+               loginName: $("#username").val(),
+               pwd: $("#userpwd").val()
+           },
+                success: function (jsonObj) {
+                    $.handleJsonResult(jsonObj, function () {
+                        window.location = jsonObj.RedirectURL;
+                    });
+                },
+                error: function (data) {
+                    alert(data.statusText);
+                }
+            });
+        };
 
     </script>
 </head>
@@ -45,7 +51,8 @@
 <body class="login">
 
     <div class="login_m">
-        <div class="login_logo"><img src="~/Images/logo.png" width="196" height="46" /></div>
+        <div class="login_logo"><img src="~/Images/logo.png" width="177" height="88" /></div>
+
         <div class="login_boder">
             <div class="login_padding">
                 <h2>用户名</h2>
@@ -58,9 +65,8 @@
                 </label>
                 <p class="forgot"></p>
                 <div class="rem_sub">
-
                     <label>
-                        <input type="button" class="sub_button" name="button" id="btnLogin" value="登录" />
+                        <input type="submit" class="sub_button" name="button" id="btnLogin" value="登录" />
                     </label>
                 </div>
             </div>

@@ -12,12 +12,16 @@ namespace LJ.Reports.Web.Controllers
 {
     public class ReportsController : Controller
     {
+        //获取中心
+        private center center = SessionHelper.GetSession(SessionHelper.LoginCenter) as center;
+
         /// <summary>
         ///  显示统计列表
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
         {
+            ViewData["LoginName"] = center.name;
             return View();
         }
 
@@ -34,7 +38,7 @@ namespace LJ.Reports.Web.Controllers
             int rowCount = 0;
 
             //在session中获取CenterID
-            center center=SessionHelper.GetSession(SessionHelper.LoginCenter) as center;
+            //center center = SessionHelper.GetSession(SessionHelper.LoginCenter) as center;
 
             // 查询分页数据
             List<permission> list = new PermissionBLL().getPermissionBy(center.id, pageIndex, pageSize, out rowCount);
